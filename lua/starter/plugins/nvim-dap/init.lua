@@ -66,7 +66,7 @@ return {
       port = "13000",
       executable = {
         -- TODO: make sure to set path to your codelldb
-        command = os.getenv("HOME") .. "/Downloads/codelldb-aarch64-darwin/extension/adapter/codelldb",
+        command = os.getenv("HOME") .. "~/.config/codelldb/codelldb-aarch64-darwin/extension/adapter/codelldb",
         args = {
           "--port",
           "13000",
