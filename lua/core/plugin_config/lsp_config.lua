@@ -12,7 +12,7 @@ lsp_defaults.capabilities = vim.tbl_deep_extend(
   require('cmp_nvim_lsp').default_capabilities()
 )
 
-require("lspconfig").lua_ls.setup {
+lspconfig.lua_ls.setup {
   settings = {
     Lua = {
       diagnostics = {
@@ -28,7 +28,7 @@ require("lspconfig").lua_ls.setup {
   }
 }
 
-require("lspconfig").solargraph.setup({})
+lspconfig.clangd.setup {}
 
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('UserLspConfig', {}),

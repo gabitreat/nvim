@@ -1,5 +1,5 @@
 require("lazy").setup({
-    {"ellisonleao/gruvbox.nvim", priority = 1000, config = true},
+    { "ellisonleao/gruvbox.nvim", priority = 1000, config = true },
     "nvim-tree/nvim-tree.lua",
     "nvim-tree/nvim-web-devicons",
     "nvim-lualine/lualine.nvim",
@@ -8,7 +8,8 @@ require("lazy").setup({
     "lewis6991/gitsigns.nvim",
     "tpope/vim-fugitive",
     "stevearc/oil.nvim",
-    "numToStr/Comment.nvim",
+    "numToStr/Comment.nvim", -- amongst your other plugins
+    {'akinsho/toggleterm.nvim', version = "*", config = true},
     -- completion
     "hrsh7th/nvim-cmp",
     "hrsh7th/cmp-nvim-lsp",
@@ -16,11 +17,29 @@ require("lazy").setup({
     "saadparwaiz1/cmp_luasnip",
     "rafamadriz/friendly-snippets",
     "github/copilot.vim",
+    { "jose-elias-alvarez/null-ls.nvim", event = "VeryLazy" },
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
+    "mfussengger/nvim-dap",
+    { "folke/neodev.nvim", opts = {} },
+    { "rcarriga/nvim-dap-ui",
+        event = "VeryLazy",
+        dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"},
+    },
+    { "jay-babu/mason-nvim-dap.nvim",
+        event = "VeryLazy",
+        dependencies = {
+            "williamboman/mason.nvim",
+            "mfussengger/nvim-dap",
+        },
+        opts = {
+            handlers = {},
+        },
+    },
     "neovim/nvim-lspconfig",
     {
-        "nvim-telescope/telescope.nvim", tag = "0.1.4",
+        "nvim-telescope/telescope.nvim",
+        tag = "0.1.4",
         dependencies = { "nvim-lua/plenary.nvim" }
     },
     {
